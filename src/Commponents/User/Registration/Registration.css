@@ -1,0 +1,20 @@
+.in {
+    width: 30%;
+    height: 45px;
+    margin-top: 15px;
+}
+
+.reg-btn {
+    background-color: #f29023;
+    border: 0.5px solid gray;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.g-btn {
+    background-color: #f0c14b;
+    border: 0.5px solid gray;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: px;
+}

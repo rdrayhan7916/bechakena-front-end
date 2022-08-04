@@ -1,23 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './Commponents/Home/Home/Home';
+import AllProducts from './Commponents/GamingProducts/AllProducts/AllProducts';
+import Registration from './Commponents/User/Registration/Registration';
+import Login from './Commponents/User/Login/Login';
+import SingleProduct from './Commponents/GamingProducts/SingleProduct/SingleProduct';
+import Header from './Commponents/Shared/Header/Header';
+import Footer from './Commponents/Shared/Footer/Footer';
+import DashBoard from './Commponents/DashBoard/DashBoard/DashBoard';
+import User from './Commponents/DashBoard/User/User';
+import Cart from './Commponents/Cart/Cart';
+import CheckOut from './Commponents/CheckOut/CheckOut';
+import VendorForm from './Commponents/User/VendorForm/VendorForm';
+import GadgetsAllProducts from './Commponents/GadgetsProducts/GadgetsAllProducts/GadgetsAllProducts';
+import KitchenProducts from './Commponents/KitchenProducts/KitchenProducts';
+import HomeAppilianceProducts from './Commponents/HomeAppilianceProducts/HomeAppilianceProducts';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/gamingproducts" element={<AllProducts />} />
+          <Route path="/gadgetsproducts" element={<GadgetsAllProducts />} />
+          <Route path="/kitchenproducts" element={<KitchenProducts />} />
+          <Route path="/homeproducts" element={<HomeAppilianceProducts />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/singin" element={<Login />} />
+          <Route path="/vendorform" element={<VendorForm />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/singleproduct/:id" element={<SingleProduct />} />
+          <Route path="/dashboard" element={<DashBoard />} >
+            <Route path='' element={<User />} />
+          </Route>
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }

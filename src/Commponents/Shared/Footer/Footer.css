@@ -1,0 +1,44 @@
+.footer {
+    margin-top: 50px;
+    background-color: #faa62b;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.f-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.sub-part {
+    color: white;
+    text-align: start;
+
+}
+
+.sub-btn {
+    color: #fff;
+    background-color: #0d6efd;
+    border: 0px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.sub-inpt {
+    height: 50px;
+    width: 60%;
+    border-radius: 6px;
+    border: 0px;
+    margin-top: 5px;
+}
+
+.hr {
+    color: #fff;
+    font-weight: 700;
+}
+
+.f-text {
+    color: white;
+}
