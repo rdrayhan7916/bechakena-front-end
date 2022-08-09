@@ -28,7 +28,10 @@ const Cart = () => {
         let price = parseInt(item.price)
         return total + price
     }, 0)
-
+    const totalPrice = () => {
+        return subTotalPrice + 50
+    }
+    const Total = totalPrice()
     return (
         <div>
 
@@ -86,7 +89,7 @@ const Cart = () => {
                                 <Typography variant="body2" color="text.secondary">
                                     <span className=' d-flex justify-content-between'>
                                         <h6>Shipping Fee</h6>
-                                        <h6 >৳ 175</h6>
+                                        <h6 >৳ 50</h6>
                                     </span>
 
                                 </Typography>
@@ -101,7 +104,7 @@ const Cart = () => {
                                 <Typography variant="body2" color="text.secondary">
                                     <span className=' d-flex justify-content-between'>
                                         <h6>Total</h6>
-                                        <h6 className='total-price'>৳ 175</h6>
+                                        <h6 className='total-price'>৳ {Total}</h6>
                                     </span>
 
                                 </Typography>

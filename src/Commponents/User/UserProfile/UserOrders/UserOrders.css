@@ -1,0 +1,13 @@
+.orderd-item:hover {
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.orderd-item {
+    padding: 7px;
+}
+
+.timeline-link {
+    text-decoration: none;
+    color: black;
+}

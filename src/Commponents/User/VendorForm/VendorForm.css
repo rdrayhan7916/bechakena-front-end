@@ -1,3 +1,19 @@
 .vendor-container {
     margin-top: 20px;
 }
+
+.vendor-sub-btn {
+    background-color: #f29023;
+    width: 50%;
+    margin-left: 150px;
+    border: none;
+    height: 40px;
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.vendor-form {
+    margin-left: 100px;
+
+}

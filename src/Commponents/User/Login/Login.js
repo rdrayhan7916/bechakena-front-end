@@ -21,7 +21,8 @@ const Login = () => {
                 </form>
                 <p>Are You New User? <Link to='/registration'>Please Register</Link></p>
                 <h3>OR</h3>
-                <button className='g-btn'><i class="fa-brands fa-google-plus-g me-2 g-icon"></i>Sing In With Google</button>
+                <button className='g-btn'><i class="fa-brands fa-google-plus-g me-2 g-icon"></i>Sing In With Google</button><br /><br />
+                <button className='f-btn'><i class="fa-brands fa-facebook-f me-2 f-icon"></i>Sing In With Facebook</button>
             </div>
         </div>
     );

@@ -5,11 +5,12 @@ import { useNavigate } from 'react-router-dom';
 const AllProducts = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://boiling-shelf-71708.herokuapp.com/service')
+        fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setProducts(data.meals))
     },
         [])
+    console.log(products.meals)
     const navigate = useNavigate()
     const navigateSingleProduct = id => {
         navigate(`/singleproduct/${id}`)
@@ -117,16 +118,16 @@ const AllProducts = () => {
 
 
                                 <Grid md={4} spacing={2}>
-                                    <button onClick={() => navigateSingleProduct(product._id)} className='product-card'>
+                                    <button onClick={() => navigateSingleProduct(product.idMeal)} className='product-card'>
                                         <Card sx={{ maxWidth: 345 }}>
                                             <CardMedia
                                                 component="img"
                                                 height="200"
-                                                image={product.img}
+                                                image={product.strMealThumb}
                                             />
                                             <CardContent>
                                                 <Typography gutterBottom variant="h5" component="div">
-                                                    {product.title}
+                                                    {product.strMeal}
                                                 </Typography>
                                                 <span className='rating'>
                                                     <i class="fa-solid fa-star"></i>

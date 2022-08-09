@@ -1,11 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../img/logov1.png'
 import './Header.css'
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const Header = () => {
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <div className='header-part'>
             <div className='appbar d-flex justify-content-around mt-2'>
@@ -37,35 +41,22 @@ const Header = () => {
                 </div>
             </div>
             <div className='header-menu'>
-                <a class="nav-link   text-decoration-none px-2  " data-bs-toggle="offcanvas"
-                    href="#offcanvasExample" aria-controls="offcanvasExample">
+                <button className='menu-btn' onClick={handleShow}>
                     <i class="fa-solid fa-bars"></i>
-                </a>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                    aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-                            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
-                            lists, etc.
-                        </div>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-bs-toggle="dropdown">
-                                Dropdown button
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                </button>
+
+                <Offcanvas show={show} onHide={handleClose}>
+                    <Offcanvas.Header closeButton>
+                        <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
+                        Some text as placeholder. In real life you can have the elements you
+                        have chosen. Like, text, images, lists, etc.
+                    </Offcanvas.Body>
+                </Offcanvas>
+
+
+
                 <Link className='link' to=''>Home</Link>
                 <Link className='link' to=''>Featurs</Link>
                 <Link className='link' to=''>Pricing</Link>

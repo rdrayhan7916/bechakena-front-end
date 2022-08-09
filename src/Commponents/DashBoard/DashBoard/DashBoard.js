@@ -7,7 +7,8 @@ const DashBoard = () => {
             <div className='col-3 addminRoute'>
                 <nav className="nav flex-column">
                     <Link to="user" className='ne-link'> User</Link>
-                    <Link to="vendor" className='ne-link'>Vendor</Link>
+                    <Link to="vendorrequest" className='ne-link'>Vendor Request</Link>
+                    <Link to="verifiedvendor" className='ne-link'>Verified Vendor</Link>
                     <Link to="order" className='ne-link'> Order</Link>
                     <Link to="product" className='ne-link'> Product</Link>
                 </nav>

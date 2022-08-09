@@ -1,0 +1,27 @@
+.user-pic {
+    background-color: black;
+    width: 100px;
+}
+
+.user-edit-icon {
+    position: relative;
+    left: -80px;
+    top: 35px;
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.info {
+    width: 80%;
+    margin-top: 20px;
+    height: 50px;
+}
+
+.pro-btn {
+    background-color: #f29023;
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+}

@@ -20,6 +20,12 @@ import VendorForm from './Commponents/User/VendorForm/VendorForm';
 import GadgetsAllProducts from './Commponents/GadgetsProducts/GadgetsAllProducts/GadgetsAllProducts';
 import KitchenProducts from './Commponents/KitchenProducts/KitchenProducts';
 import HomeAppilianceProducts from './Commponents/HomeAppilianceProducts/HomeAppilianceProducts';
+import VendorRequest from './Commponents/DashBoard/VendorRequest/VendorRequest';
+import VerifiedVendor from './Commponents/DashBoard/VerifiedVendor/VerifiedVendor';
+import UserProfile from './Commponents/User/UserProfile/UserProfile/UserProfile';
+import UserOrders from './Commponents/User/UserProfile/UserOrders/UserOrders.js';
+import AccountInfo from './Commponents/User/UserProfile/AccountInfo/AccountInfo';
+import OrderTimeline from './Commponents/User/UserProfile/UserOrders/OrderTimeline/OrderTimeline';
 
 function App() {
   return (
@@ -34,6 +40,12 @@ function App() {
           <Route path="/gadgetsproducts" element={<GadgetsAllProducts />} />
           <Route path="/kitchenproducts" element={<KitchenProducts />} />
           <Route path="/homeproducts" element={<HomeAppilianceProducts />} />
+          <Route path="/account" element={<UserProfile />} >
+            <Route path='' element={<UserOrders />} />
+            <Route path='order' element={<UserOrders />} />
+            <Route path='accountinfo' element={<AccountInfo />} />
+            <Route path="timeline" element={<OrderTimeline />} />
+          </Route>
           <Route path="/registration" element={<Registration />} />
           <Route path="/singin" element={<Login />} />
           <Route path="/vendorform" element={<VendorForm />} />
@@ -42,6 +54,9 @@ function App() {
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/dashboard" element={<DashBoard />} >
             <Route path='' element={<User />} />
+            <Route path='user' element={<User />} />
+            <Route path='vendorrequest' element={<VendorRequest />} />
+            <Route path='verifiedvendor' element={<VerifiedVendor />} />
           </Route>
         </Routes>
         <Footer></Footer>

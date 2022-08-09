@@ -37,11 +37,17 @@
 }
 
 .header-menu {
-
     display: flex;
     background-color: #233030;
     color: white !important;
     padding: 10px 0px;
+}
+
+.menu-btn {
+    background-color: #233030;
+    margin-left: 50px;
+    color: white;
+    border: none;
 }
 
 .nav-link {
@@ -63,9 +69,9 @@
     height: 20px;
     border-radius: 20px;
     font-weight: 600;
-    position: absolute;
-    top: 15px;
-    right: 40px;
+    position: relative;
+    top: -19px;
+    right: 10px;
     background-color: #f85606;
     color: white;
     border-color: #f85606;

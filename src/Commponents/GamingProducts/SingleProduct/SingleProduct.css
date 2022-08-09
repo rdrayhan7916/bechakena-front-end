@@ -17,6 +17,13 @@
     cursor: pointer;
 }
 
+.color-img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 .qnt-inpt {
     width: 30px;
 }
@@ -69,4 +76,9 @@
 
 .rating {
     color: #f16310;
+}
+
+.video-btn {
+    border: none;
+    background-color: #ffffff;
 }

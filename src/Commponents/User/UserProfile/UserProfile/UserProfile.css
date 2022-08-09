@@ -1,0 +1,28 @@
+.user-profile {
+    text-align: start;
+    margin-top: 50px;
+}
+
+.well-text {
+    text-align: center !important;
+    margin-bottom: 3rem;
+}
+
+.profile-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+
+
+}
+
+.profile-link:hover {
+    background-color: rgb(213, 213, 226);
+    color: gray;
+    padding: 5px;
+    border-radius: 5px;
+}

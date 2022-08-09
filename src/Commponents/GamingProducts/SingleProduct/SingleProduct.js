@@ -8,10 +8,14 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './SingleProduct.css'
 
 const SingleProduct = () => {
-    // const [isOpen, setOpen] = useState(false)
-    const [quantity, setQuantity] = useState(1)
-    const [zoomImg, setZoomImg] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrO0yvbCGSLwtlUp5AcvxXoFbQqPuzfYzGoQ&usqp=CAU")
+    const [item, setItem] = useState([])
     const [products, setProducts] = useState([])
+    const [isOpen, setOpen] = useState(false)
+    const [quantity, setQuantity] = useState(1)
+
+    const [zoomImg, setZoomImg] = useState(item.strMealThumb)
+    console.log(`${item.strMealThumb}`)
+
     useEffect(() => {
         fetch('https://boiling-shelf-71708.herokuapp.com/service')
             .then(res => res.json())
@@ -35,6 +39,13 @@ const SingleProduct = () => {
         navigate(`/singleproduct/${id}`)
     }
     const { id } = useParams()
+    useEffect(() => {
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+            .then(res => res.json())
+            .then(data => setItem(data.meals[0]))
+    },
+        [])
+
     return (
         <Container>
 
@@ -51,11 +62,12 @@ const SingleProduct = () => {
 
                                     alt: 'Wristwatch by Ted Baker London',
                                     isFluidWidth: true,
-                                    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrO0yvbCGSLwtlUp5AcvxXoFbQqPuzfYzGoQ&usqp=CAU"
+                                    src: zoomImg
+
 
                                 },
                                 largeImage: {
-                                    src: zoomImg,
+                                    src: item.strMealThumb,
                                     width: 1000,
                                     height: 1500
                                 }
@@ -96,9 +108,16 @@ const SingleProduct = () => {
                                     className='un-img'
                                     onClick={() => (changeImg("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZr0MyctfJU5ivkjHowytJhdoYQiMxE6MEw&usqp=CAU"))}
                                 />
-                                {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
+                                {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} /> */}
 
-                                <button className="btn-primary" onClick={() => setOpen(true)}>VIEW DEMO</button> */}
+                                <button className="video-btn" onClick={() => setOpen(true)}>
+
+                                    <img
+                                        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzQeTDGAbZbV41ZNXZ2kAWVvSWRMx164YQZQ&usqp=CAU'
+                                        alt=''
+                                        className='un-img'
+                                    />
+                                </button>
                             </div>
 
                         </Grid>
@@ -117,7 +136,19 @@ const SingleProduct = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     $ 40
                                 </Typography>
-                                <p>Color Family  Sky</p>
+                                <span className='under-img'>
+                                    <p>Color Family  Sky</p>
+                                    <div>
+                                        <img
+                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZr0MyctfJU5ivkjHowytJhdoYQiMxE6MEw&usqp=CAU'
+                                            alt=''
+                                            className='color-img'
+                                            onClick={() => (changeImg("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZr0MyctfJU5ivkjHowytJhdoYQiMxE6MEw&usqp=CAU"))}
+                                        />
+                                    </div>
+
+                                </span>
+
                                 <p>Size
                                     <button className='ms-5 me-2 size'>M</button>
                                     <button className='me-2 size'>L</button>
@@ -152,7 +183,7 @@ const SingleProduct = () => {
                             products.map((product) => (
 
 
-                                <Grid md={4} spacing={2}>
+                                <Grid md={4} spacing={2} key={product._id}>
                                     <button onClick={() => navigateSingleProduct(product._id)} className='product-card'>
                                         <Card sx={{ maxWidth: 345 }}>
                                             <CardMedia
