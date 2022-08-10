@@ -45,6 +45,7 @@ function App() {
             <Route path='order' element={<UserOrders />} />
             <Route path='accountinfo' element={<AccountInfo />} />
             <Route path="timeline" element={<OrderTimeline />} />
+            <Route path="order/timeline" element={<OrderTimeline />} />
           </Route>
           <Route path="/registration" element={<Registration />} />
           <Route path="/singin" element={<Login />} />

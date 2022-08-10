@@ -1,0 +1,14 @@
+.dot {
+    width: 30px;
+    height: 30px;
+
+}
+
+.connector {
+    height: 50px;
+}
+
+.timeline {
+    text-align: start !important;
+    margin-left: -500px;
+}

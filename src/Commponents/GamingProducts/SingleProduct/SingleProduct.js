@@ -8,13 +8,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './SingleProduct.css'
 
 const SingleProduct = () => {
-    const [item, setItem] = useState([])
+
     const [products, setProducts] = useState([])
     const [isOpen, setOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
 
-    const [zoomImg, setZoomImg] = useState(item.strMealThumb)
-    console.log(`${item.strMealThumb}`)
+
 
     useEffect(() => {
         fetch('https://boiling-shelf-71708.herokuapp.com/service')
@@ -22,11 +21,7 @@ const SingleProduct = () => {
             .then(data => setProducts(data))
     },
         [])
-    const changeImg = (imgSrc) => {
-        const mainImg = document.getElementsByClassName("main-img")
-        mainImg[0].children[0].src = imgSrc
-        setZoomImg(imgSrc)
-    }
+
 
     const increment = () => {
         setQuantity(quantity + 1)
@@ -45,7 +40,15 @@ const SingleProduct = () => {
             .then(data => setItem(data.meals[0]))
     },
         [])
+    const [item, setItem] = useState([])
+    const [zoomImg, setZoomImg] = useState(`${item.strMealThumb}`)
+    console.log(`${item.strMealThumb}`)
 
+    const changeImg = (imgSrc = `${item.strMealThumb}`) => {
+        const mainImg = document.getElementsByClassName("main-img")
+        mainImg[0].children[0].src = imgSrc
+        setZoomImg(imgSrc)
+    }
     return (
         <Container>
 
@@ -57,21 +60,22 @@ const SingleProduct = () => {
                         <Grid item xs={6}>
 
 
-                            <ReactImageMagnify className='main-img' {...{
-                                smallImage: {
+                            <ReactImageMagnify
+                                className='main-img' {...{
+                                    smallImage: {
 
-                                    alt: 'Wristwatch by Ted Baker London',
-                                    isFluidWidth: true,
-                                    src: zoomImg
+                                        alt: 'Product Img',
+                                        isFluidWidth: true,
+                                        src: `${item.strMealThumb}`
 
 
-                                },
-                                largeImage: {
-                                    src: item.strMealThumb,
-                                    width: 1000,
-                                    height: 1500
-                                }
-                            }} />
+                                    },
+                                    largeImage: {
+                                        src: zoomImg,
+                                        width: 1000,
+                                        height: 1500
+                                    }
+                                }} />
 
                             {/* <img
                                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrO0yvbCGSLwtlUp5AcvxXoFbQqPuzfYzGoQ&usqp=CAU'
