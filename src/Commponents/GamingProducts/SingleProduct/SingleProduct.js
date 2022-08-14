@@ -55,7 +55,7 @@ const SingleProduct = () => {
 
             <Grid container spacing={2}>
 
-                <Grid item xs={9}>
+                <Grid item xs={12}>
                     <Grid container spacing={6}>
                         <Grid item xs={6}>
 
@@ -170,11 +170,6 @@ const SingleProduct = () => {
                             </CardContent>
                         </Grid>
                     </Grid>
-                </Grid>
-                <Grid item xs={3}>
-                    <h1>Other part</h1>
-                    <p>Id {id}</p>
-
                 </Grid>
             </Grid>
             <Grid container spacing={2}>

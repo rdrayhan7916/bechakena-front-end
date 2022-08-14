@@ -1,5 +1,6 @@
 .header-part {
     padding-top: 10px;
+    background-color: white;
 }
 
 .header-logo {
@@ -62,6 +63,9 @@
 
 .src-btn {
     border: none;
+    position: relative;
+    left: -50px;
+    background-color: white;
 }
 
 .cart-inpt {
@@ -81,4 +85,28 @@
 .cart-link {
     text-decoration: none;
     color: #000;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .input-tag {
+        width: 9rem;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .search-icon {
+        font-size: 1rem;
+    }
+
+    .menu-btn {
+        margin-left: 10px;
+    }
+
+    .src-btn {
+        position: relative;
+        left: -30px;
+    }
 }

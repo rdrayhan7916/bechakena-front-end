@@ -5,11 +5,16 @@
 }
 
 .ne-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
     text-align: start;
     text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
+    font-size: 16px;
+    color: white;
     padding-left: 2rem;
+    background-color: rgb(102, 102, 197);
+    margin: 3px;
+    border-radius: 5px;
 }
 
 .ad {
@@ -17,7 +22,8 @@
 }
 
 .ne-link:hover {
-    color: orangered;
+    color: rgb(253, 73, 8);
+    background-color: darkblue;
 }
 
 .admin-part {

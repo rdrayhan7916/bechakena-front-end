@@ -11,7 +11,7 @@ const Header = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <div className='header-part'>
+        <div className='header-part sticky-top'>
             <div className='appbar d-flex justify-content-around mt-2'>
                 <div>
                     <Link to="/"> <img src={logo} alt='' className='header-logo' /></Link>

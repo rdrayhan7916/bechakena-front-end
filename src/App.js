@@ -26,6 +26,9 @@ import UserProfile from './Commponents/User/UserProfile/UserProfile/UserProfile'
 import UserOrders from './Commponents/User/UserProfile/UserOrders/UserOrders.js';
 import AccountInfo from './Commponents/User/UserProfile/AccountInfo/AccountInfo';
 import OrderTimeline from './Commponents/User/UserProfile/UserOrders/OrderTimeline/OrderTimeline';
+import VendorDashboard from './Commponents/VendorDashboard/VendorDashboard';
+import OrderList from './Commponents/VendorDashboard/OrderList/OrderList';
+import ProductList from './Commponents/VendorDashboard/ProductList/ProductList';
 
 function App() {
   return (
@@ -58,6 +61,11 @@ function App() {
             <Route path='user' element={<User />} />
             <Route path='vendorrequest' element={<VendorRequest />} />
             <Route path='verifiedvendor' element={<VerifiedVendor />} />
+          </Route>
+          <Route path="/Vendordashboard" element={<VendorDashboard />} >
+            <Route path='' element={<OrderList />} />
+            <Route path='orderlist' element={<OrderList />} />
+            <Route path='productlist' element={<ProductList />} />
           </Route>
         </Routes>
         <Footer></Footer>

@@ -14,6 +14,7 @@ const DashBoard = () => {
                 </nav>
             </div>
             <div className='col-9'>
+                <h1>Grid</h1>
                 <Outlet />
             </div>
         </div>
