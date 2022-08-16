@@ -13,6 +13,10 @@
     border-radius: 5px;
 }
 
+.textArea {
+    height: 100px;
+}
+
 .vendor-form {
     margin-left: 150px;
 

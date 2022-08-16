@@ -20,12 +20,15 @@
 .resizing_select {
     width: auto;
     border: 0px;
+    height: 3rem;
 }
 
 .input-tag {
     border: 0px;
     width: 40rem;
     height: 3rem;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .search-icon {

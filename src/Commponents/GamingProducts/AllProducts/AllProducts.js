@@ -117,7 +117,7 @@ const AllProducts = () => {
                             products.map((product) => (
 
 
-                                <Grid md={4} spacing={2}>
+                                <Grid md={4} xs={6} spacing={2}>
                                     <button onClick={() => navigateSingleProduct(product.idMeal)} className='product-card'>
                                         <Card sx={{ maxWidth: 345 }}>
                                             <CardMedia

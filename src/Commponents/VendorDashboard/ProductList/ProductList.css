@@ -1,0 +1,13 @@
+.add-product-btn-div {
+    text-align: start !important;
+    margin-bottom: 20px;
+}
+
+.add-product-btn {
+    text-decoration: none;
+    background-color: whitesmoke;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(146, 116, 116);
+
+}

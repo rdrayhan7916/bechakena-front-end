@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <Grid container spacing={2}>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={4} >
                             <Link className='f-link' to=""> Home</Link><br />
@@ -34,7 +34,7 @@ const Footer = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={6} className="sub-part">
+                <Grid item md={6} xs={12} className="sub-part">
                     <h4>Subscribe to our newsletter</h4>
                     <h6 className='mt-3'>Monthly digest of whats new and exciting from us.</h6>
                     <input className='sub-inpt' placeholder='Email address' />

@@ -29,6 +29,7 @@ import OrderTimeline from './Commponents/User/UserProfile/UserOrders/OrderTimeli
 import VendorDashboard from './Commponents/VendorDashboard/VendorDashboard';
 import OrderList from './Commponents/VendorDashboard/OrderList/OrderList';
 import ProductList from './Commponents/VendorDashboard/ProductList/ProductList';
+import AddProduct from './Commponents/VendorDashboard/ProductList/AddProduct';
 
 function App() {
   return (
@@ -63,9 +64,11 @@ function App() {
             <Route path='verifiedvendor' element={<VerifiedVendor />} />
           </Route>
           <Route path="/Vendordashboard" element={<VendorDashboard />} >
-            <Route path='' element={<OrderList />} />
-            <Route path='orderlist' element={<OrderList />} />
+            <Route path='' element={<ProductList />} />
             <Route path='productlist' element={<ProductList />} />
+            <Route path='orderlist' element={<OrderList />} />
+            <Route path='addproduct' element={<AddProduct />} />
+
           </Route>
         </Routes>
         <Footer></Footer>
