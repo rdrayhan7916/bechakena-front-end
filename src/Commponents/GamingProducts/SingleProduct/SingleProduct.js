@@ -3,11 +3,14 @@ import { Container } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import ReactImageMagnify from 'react-image-magnify';
 import { useNavigate, useParams } from 'react-router-dom';
-// import ModalVideo from 'react-modal-video'
+// import 'node_modules/react-modal-video/scss/modal-video.scss';
+import "react-modal-video/scss/modal-video.scss";
+import ModalVideo from 'react-modal-video'
 
 import './SingleProduct.css'
 
 const SingleProduct = () => {
+
 
     const [products, setProducts] = useState([])
     const [isOpen, setOpen] = useState(false)
@@ -55,9 +58,9 @@ const SingleProduct = () => {
 
             <Grid container spacing={2}>
 
-                <Grid item xs={12}>
+                <Grid item md={12} xs={12}>
                     <Grid container spacing={6}>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
 
 
                             <ReactImageMagnify
@@ -112,8 +115,6 @@ const SingleProduct = () => {
                                     className='un-img'
                                     onClick={() => (changeImg("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZr0MyctfJU5ivkjHowytJhdoYQiMxE6MEw&usqp=CAU"))}
                                 />
-                                {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} /> */}
-
                                 <button className="video-btn" onClick={() => setOpen(true)}>
 
                                     <img
@@ -122,10 +123,11 @@ const SingleProduct = () => {
                                         className='un-img'
                                     />
                                 </button>
-                            </div>
 
+                            </div>
+                            <div> <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="R-B2WqWfuM0" onClose={() => setOpen(false)} /></div>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item md={6} xs={12}>
                             <CardContent className='content'>
                                 <Typography gutterBottom variant="h6" component="div">
                                     Fiodio Rainbow Membrane Gaming Keyboard, Quiet Wired Computer Keyboard, 104 Silent Keys, 26 Anti-Ghosting Keys, Spill Resistant, Multimedia Control for PC and Desktop

@@ -10,7 +10,7 @@ const Category = () => {
     return (
         <div className='category'>
             <Grid container spacing={2}>
-                <Grid item md={3} xs={12}>
+                <Grid className='' item md={3} xs={12}>
 
                     <Card sx={{ maxWidth: 345 }}>
                         <CardContent>

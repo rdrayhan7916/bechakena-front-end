@@ -93,11 +93,15 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .input-tag {
-        width: 9rem;
+        width: 8rem;
     }
 
     .header-logo {
-        width: 100px;
+        width: 50px;
+    }
+
+    .resizing_select {
+        width: 40px;
     }
 
     .search-icon {
@@ -112,4 +116,6 @@
         position: relative;
         left: -30px;
     }
+
+
 }

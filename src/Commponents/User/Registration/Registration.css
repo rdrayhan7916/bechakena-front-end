@@ -33,3 +33,17 @@
     width: 30%;
     color: white;
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .f-btn {
+        font-weight: 300;
+        font-size: 10px;
+    }
+
+    .g-btn {
+        font-weight: 300;
+        font-size: 10px;
+    }
+}

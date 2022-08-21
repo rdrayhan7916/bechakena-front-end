@@ -63,3 +63,14 @@
 .item-dlt-btn:hover {
     font-size: 20px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .cart-item-img {
+        width: 50px;
+    }
+
+    .cart-item-title {
+        font-size: 20px;
+    }
+}

@@ -37,29 +37,29 @@ const Cart = () => {
 
             <Container>
                 <Grid container spacing={2}>
-                    <Grid item xs={8}>
+                    <Grid item md={8} xs={12}>
                         {
                             products.map((product) => (
                                 <Grid container className='item' key={product.title}>
-                                    <Grid item xs={2}>
+                                    <Grid item md={2} xs={6}>
                                         <img
                                             src={product.img}
                                             alt=""
                                             className='cart-item-img'
                                         />
                                     </Grid>
-                                    <Grid item xs={3}>
-                                        <h5>{product.title}</h5>
+                                    <Grid item md={3} xs={3}>
+                                        <h5 className='cart-item-title'>{product.title}</h5>
                                     </Grid>
-                                    <Grid item xs={2}>
+                                    <Grid item md={2} xs={3}>
                                         <h3 >$ {product.price}</h3>
                                     </Grid>
-                                    <Grid item xs={3}>
+                                    <Grid item md={3} xs={6}>
                                         <button onClick={() => decrement()} className='ms-5 me-2 qnt-btn'>-</button>
                                         <input className='qnt-inpt' value={quantity} />
                                         <button onClick={() => increment()} className='ms-2 qnt-btn'>+</button>
                                     </Grid>
-                                    <Grid item xs={2}>
+                                    <Grid item md={2} xs={6}>
                                         <button className='item-dlt-btn'>
                                             <i class="fa-solid fa-trash"></i>
                                         </button>
@@ -70,7 +70,7 @@ const Cart = () => {
 
 
                     </Grid>
-                    <Grid item xs={4} className="">
+                    <Grid item md={4} xs={12} className="">
 
 
                         <Card className='card'>

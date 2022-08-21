@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.1",
     "react-image-magnify": "^2.7.4",
+    "react-modal-video": "^1.2.10",
     "react-multi-carousel": "^2.8.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
@@ -47,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.54.5"
   }
 }
