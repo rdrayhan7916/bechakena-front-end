@@ -8,6 +8,8 @@ import Footer from '../Shared/Footer/Footer';
 
 const CheckOut = () => {
     const [products, setProducts] = useState([])
+    const [show, setShow] = useState(false)
+    console.log(show)
 
     useEffect(() => {
         fetch('https://boiling-shelf-71708.herokuapp.com/service')
@@ -46,6 +48,27 @@ const CheckOut = () => {
                             <input className='check-inpt' {...register("address", { required: true })} /><br />
                             <input type="submit" />
                         </form>
+                        <button onClick={() => {
+                            setShow(!show)
+                        }}>show</button>
+                        {show && <form onSubmit={handleSubmit(onSubmit)} className="checkout-form">
+                            <label className="check-lbl">Full Name *</label><br />
+                            <input className='check-inpt' {...register("fullName", { required: true })} /><br />
+                            <label className="check-lbl">Phone *</label><br />
+                            <input className='check-inpt' {...register("phone", { required: true })} /><br />
+                            <label className="check-lbl">Email *</label><br />
+                            <input className='check-inpt' {...register("email", { required: true })} /><br />
+
+                            <label className="check-lbl">District *</label><br />
+                            <select className='check-inpt' {...register("District", { required: true })}>
+                                <option value="DHAKA">DHAKA</option>
+                                <option value="BHOLA">BHOLA</option>
+                                <option value="KHULNA">KHULNA</option>
+                            </select><br />
+                            <label className="check-lbl">Address *</label><br />
+                            <input className='check-inpt' {...register("address", { required: true })} /><br />
+                            <input type="submit" />
+                        </form>}
 
                     </Grid>
                     <Grid item xs={4} className="">
