@@ -4,6 +4,7 @@ import './DashBoard.css'
 const DashBoard = () => {
     return (
         <div className='row ad'>
+            <div className='dashboard-top'></div>
             <div className='col-3 addminRoute'>
                 <nav className="nav flex-column">
                     <Link to="user" className='ne-link'> User</Link>
@@ -14,6 +15,7 @@ const DashBoard = () => {
                 </nav>
             </div>
             <div className='col-9'>
+
                 <h1>Grid</h1>
                 <Outlet />
             </div>

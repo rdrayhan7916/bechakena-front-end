@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Grid, CardMedia, CardContent, Typography, Card, } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 
 
 const KitchenProducts = () => {
@@ -17,6 +19,7 @@ const KitchenProducts = () => {
     }
     return (
         <div>
+            <Header></Header>
             <h1>Kitchen all products page</h1>
             <Grid container spacing={2}>
                 <Grid item md={2}>
@@ -150,6 +153,7 @@ const KitchenProducts = () => {
                     </Grid>
                 </Grid>
             </Grid>
+            <Footer></Footer>
         </div>
     );
 };

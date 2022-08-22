@@ -1,7 +1,14 @@
 .addminRoute {
-    background-color: rgb(213, 213, 236);
+    background-color: #233030;
     height: 100%;
     padding-bottom: 100%;
+}
+
+.dashboard-top {
+    background-color: #233030;
+    padding: 20px;
+
+
 }
 
 .ne-link {

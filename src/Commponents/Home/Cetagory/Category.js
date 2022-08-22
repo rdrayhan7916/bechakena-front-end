@@ -12,7 +12,7 @@ const Category = () => {
             <Grid container spacing={2}>
                 <Grid className='' item md={3} xs={12}>
 
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card className='category-item' sx={{ maxWidth: 345 }}>
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
                                 Gaming accessories
@@ -38,7 +38,7 @@ const Category = () => {
                 </Grid>
                 <Grid item md={3} xs={12}>
 
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card className='category-item' sx={{ maxWidth: 345 }}>
                         <Link to="/gadgetsproducts">
                             <CardMedia
                                 component="img"
@@ -63,7 +63,7 @@ const Category = () => {
                 </Grid>
                 <Grid item md={3} xs={12}>
 
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card className='category-item' sx={{ maxWidth: 345 }}>
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
                                 Kitchen appliance
@@ -87,7 +87,7 @@ const Category = () => {
                 </Grid>
                 <Grid item md={3} xs={12}>
 
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card className='category-item' sx={{ maxWidth: 345 }}>
                         <Link to="/homeproducts">
                             <CardMedia
                                 component="img"
@@ -109,8 +109,6 @@ const Category = () => {
 
 
                 </Grid>
-
-
             </Grid>
         </div>
     );

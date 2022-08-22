@@ -119,3 +119,33 @@
 
 
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+    .input-tag {
+        width: 10rem;
+    }
+
+    .header-logo {
+        width: 1000px;
+        background-color: #f85606;
+    }
+
+    .resizing_select {
+        width: 60px;
+    }
+
+    .search-icon {
+        font-size: 1rem;
+    }
+
+    .menu-btn {
+        margin-left: 10px;
+    }
+
+    .src-btn {
+        position: relative;
+        left: -30px;
+    }
+
+} */

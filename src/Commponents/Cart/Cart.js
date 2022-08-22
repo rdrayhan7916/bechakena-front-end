@@ -6,6 +6,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 
 const Cart = () => {
     const [quantity, setQuantity] = useState(1)
@@ -34,7 +36,7 @@ const Cart = () => {
     const Total = totalPrice()
     return (
         <div>
-
+            <Header></Header>
             <Container>
                 <Grid container spacing={2}>
                     <Grid item md={8} xs={12}>
@@ -117,6 +119,7 @@ const Cart = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Footer></Footer>
         </div>
     );
 };

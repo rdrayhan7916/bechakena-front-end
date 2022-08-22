@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Grid, CardMedia, CardContent, Typography, Card, } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import './GadgetsAllProducts.css'
+import Header from '../../Shared/Header/Header';
+import Footer from '../../Shared/Footer/Footer';
 const GadgetsAllProducts = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -16,6 +18,7 @@ const GadgetsAllProducts = () => {
     }
     return (
         <div>
+            <Header></Header>
             <h1>Gadgets all products page</h1>
             <Grid container spacing={2}>
                 <Grid item md={2}>
@@ -149,6 +152,7 @@ const GadgetsAllProducts = () => {
                     </Grid>
                 </Grid>
             </Grid>
+            <Footer></Footer>
         </div>
     );
 };

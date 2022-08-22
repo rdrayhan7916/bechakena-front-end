@@ -10,8 +10,6 @@ import AllProducts from './Commponents/GamingProducts/AllProducts/AllProducts';
 import Registration from './Commponents/User/Registration/Registration';
 import Login from './Commponents/User/Login/Login';
 import SingleProduct from './Commponents/GamingProducts/SingleProduct/SingleProduct';
-import Header from './Commponents/Shared/Header/Header';
-import Footer from './Commponents/Shared/Footer/Footer';
 import DashBoard from './Commponents/DashBoard/DashBoard/DashBoard';
 import User from './Commponents/DashBoard/User/User';
 import Cart from './Commponents/Cart/Cart';
@@ -39,7 +37,7 @@ function App() {
 
       <BrowserRouter>
 
-        <Header></Header>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -74,7 +72,7 @@ function App() {
 
           </Route>
         </Routes>
-        <Footer></Footer>
+
       </BrowserRouter>
     </div>
   );

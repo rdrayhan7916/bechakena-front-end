@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './CheckOut.css'
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 
 const CheckOut = () => {
     const [products, setProducts] = useState([])
@@ -22,6 +24,7 @@ const CheckOut = () => {
     const onSubmit = data => console.log(data);
     return (
         <div>
+            <Header></Header>
             <Container>
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
@@ -92,6 +95,7 @@ const CheckOut = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Footer></Footer>
         </div>
     );
 };
