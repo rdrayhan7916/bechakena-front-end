@@ -48,9 +48,14 @@ const CheckOut = () => {
                             <input className='check-inpt' {...register("address", { required: true })} /><br />
                             <input type="submit" />
                         </form>
-                        <button onClick={() => {
-                            setShow(!show)
-                        }}>show</button>
+                        <span>
+                            <button className='shipping-address' onClick={() => { setShow(!show) }}>
+
+                                <label for="c__" > <i class="fa-solid fa-location-dot"></i> SHIPPING ADDRESS </label>
+                            </button>
+
+                        </span>
+
                         {show && <form onSubmit={handleSubmit(onSubmit)} className="checkout-form">
                             <label className="check-lbl">Full Name *</label><br />
                             <input className='check-inpt' {...register("fullName", { required: true })} /><br />

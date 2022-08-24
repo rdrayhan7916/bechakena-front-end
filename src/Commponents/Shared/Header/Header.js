@@ -31,7 +31,7 @@ const Header = () => {
                 <div className='usre-div'>
                     <Link to="/singin" className='btn-sing me-3'><i class="fa-solid fa-user"></i></Link>
                     <span>
-                        <Link to="cart" className='cart-link'>
+                        <Link to="/cart" className='cart-link'>
                             <i class="fa-solid fa-cart-shopping cart-icon"></i>
                         </Link>
 

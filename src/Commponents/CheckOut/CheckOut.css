@@ -13,3 +13,14 @@
     color: black;
     font-weight: 700;
 }
+
+.shipping-address {
+    background-color: rgb(236, 232, 232);
+    border: none;
+    text-align: start !important;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 3px;
+    border-radius: 5px;
+}
