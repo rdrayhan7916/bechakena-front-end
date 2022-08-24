@@ -30,6 +30,7 @@ const CheckOut = () => {
             <Container>
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
+                        <h5 className='text-start ad__'><i class="fa-solid fa-location-dot"></i>BILLING ADDRESS</h5>
                         <form onSubmit={handleSubmit(onSubmit)} className="checkout-form">
                             <label className="check-lbl">Full Name *</label><br />
                             <input className='check-inpt' {...register("fullName", { required: true })} /><br />
@@ -48,13 +49,13 @@ const CheckOut = () => {
                             <input className='check-inpt' {...register("address", { required: true })} /><br />
                             <input type="submit" />
                         </form>
-                        <span>
+                        <h5>
                             <button className='shipping-address' onClick={() => { setShow(!show) }}>
 
                                 <label for="c__" > <i class="fa-solid fa-location-dot"></i> SHIPPING ADDRESS </label>
                             </button>
 
-                        </span>
+                        </h5>
 
                         {show && <form onSubmit={handleSubmit(onSubmit)} className="checkout-form">
                             <label className="check-lbl">Full Name *</label><br />
